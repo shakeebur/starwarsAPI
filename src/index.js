@@ -1,7 +1,7 @@
 const BASE_URL = 'https://swapi.dev/api/planets/';
 const planetList = [];
-
-async function fetchPlanets(url) {
+// using try catch to avoid errors
+async function Planets(url) {
   try {
     const res = await fetch(url);
     if (!res.ok) {
@@ -12,14 +12,14 @@ async function fetchPlanets(url) {
     data.results.forEach(planet => {
       const { name, diameter, gravity, climate, population } = planet;
 
-      // Check if any of the relevant data fields are missing or unknown
+      // Here im checking for the unknown fields
       if (diameter !== 'unknown' && gravity !== 'unknown' && climate !== 'unknown' && population !== 'unknown') {
         planetList.push({ name, diameter, gravity, climate, population });
       }
     });
 
     if (data.next) {
-      await fetchPlanets(data.next);
+      await Planets(data.next);
     } else {
       const csv = convertToCSV(planetList);
       downloadCSV(csv);
@@ -44,4 +44,4 @@ function downloadCSV(csv) {
   a.click();
 }
 
-fetchPlanets(BASE_URL);
+Planets(BASE_URL);
