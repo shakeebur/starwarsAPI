@@ -5,5 +5,5 @@ This is a Javascript script that utilizes the Star Wars API (https://swapi.dev/a
 <img src="https://i.imgur.com/nTUbw9l.png" alt="Alt Text" width="400" height="200">
 
 ###### Credits
-######This script was created by Shakeeb Rahman.
+###### This script was created by Shakeeb Rahman.
 
