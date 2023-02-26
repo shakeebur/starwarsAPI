@@ -1,6 +1,5 @@
-This is made for 2023 Coding Challenge: Software Developer, Business Systems                                                                                              
-The script to fetch planets is found here -->/src/index.js                                                                                                                
-Please see attached .csv file tht is named "planet-data.csv"
-# starwarsAPI
-Created with CodeSandbox
-Thank you!
+# Star Wars API Data Cleanup Script
+This is a Javascript script that utilizes the Star Wars API (https://swapi.dev/api/planets/) to retrieve the name, diameter, gravity, climate, and population for all the planets available on the API. The script then performs data cleanup by removing any planets that have missing or unknown values for all the columns (diameter, gravity, climate, and population), and finally writes the final cleaned dataset to a CSV file.
+# Credits
+This script was created by Shakeeb Rahman.
+
